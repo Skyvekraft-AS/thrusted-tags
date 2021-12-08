@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<optionset Name="skyve_tagscope" localizedName="Tag Scope" description="The Scope for a tag" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <OptionSetType>picklist</OptionSetType>
+  <IsGlobal>1</IsGlobal>
+  <IntroducedVersion>0.0.0.1</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <ExternalTypeName></ExternalTypeName>
+  <displaynames>
+    <displayname description="Tag Scope" languagecode="1033" />
+  </displaynames>
+  <Descriptions>
+    <Description description="The Scope for a tag" languagecode="1033" />
+  </Descriptions>
+  <options>
+    <option value="970380000" ExternalValue="" Color="#0000ff">
+      <labels>
+        <label description="Personal" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="970380001" ExternalValue="" Color="#0000ff">
+      <labels>
+        <label description="Organizational" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+    <option value="970380002" ExternalValue="" Color="#0000ff">
+      <labels>
+        <label description="Global" languagecode="1033" />
+      </labels>
+      <Descriptions>
+        <Description description="" languagecode="1033" />
+      </Descriptions>
+    </option>
+  </options>
+</optionset>

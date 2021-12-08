@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{73e54cde-8593-ea11-a811-000d3ab8d5b5}</WebResourceId>
+  <Name>skyve_Tag_Icon_ICO32</Name>
+  <DisplayName>Tag Icon ICO32</DisplayName>
+  <WebResourceType>10</WebResourceType>
+  <IntroducedVersion>0.0.0.1</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/skyve_Tag_Icon_ICO3273E54CDE-8593-EA11-A811-000D3AB8D5B5</FileName>
+</WebResource>

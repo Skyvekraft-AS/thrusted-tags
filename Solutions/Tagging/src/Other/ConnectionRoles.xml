@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ConnectionRoles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ConnectionRoles>
+    <ConnectionRole>
+      <connectionroleid>{ad2161e6-8c93-ea11-a811-000d3ab8d5b5}</connectionroleid>
+      <name>Tagged By</name>
+      <category>5</category>
+      <IsCustomizable>1</IsCustomizable>
+      <IntroducedVersion>0.0.0.1</IntroducedVersion>
+      <ConnectionRoleObjectTypeCodes>
+        <ConnectionRoleObjectTypeCode>
+          <connectionroleobjecttypecodeid>{2391f80b-8e93-ea11-a811-000d3ab8d5b5}</connectionroleobjecttypecodeid>
+          <associatedobjecttypecode>All</associatedobjecttypecode>
+        </ConnectionRoleObjectTypeCode>
+      </ConnectionRoleObjectTypeCodes>
+    </ConnectionRole>
+    <ConnectionRole>
+      <connectionroleid>{9d4c6bf8-8c93-ea11-a811-000d3ab8d5b5}</connectionroleid>
+      <name>Tagged</name>
+      <category>5</category>
+      <IsCustomizable>1</IsCustomizable>
+      <IntroducedVersion>0.0.0.1</IntroducedVersion>
+      <ConnectionRoleObjectTypeCodes>
+        <ConnectionRoleObjectTypeCode>
+          <connectionroleobjecttypecodeid>{0a75c905-8e93-ea11-a811-000d3ab8d5b5}</connectionroleobjecttypecodeid>
+          <associatedobjecttypecode>skyve_tag</associatedobjecttypecode>
+        </ConnectionRoleObjectTypeCode>
+      </ConnectionRoleObjectTypeCodes>
+    </ConnectionRole>
+  </ConnectionRoles>
+  <ConnectionRoleAssociations>
+    <ConnectionRoleAssociation>
+      <connectionroleid>{ad2161e6-8c93-ea11-a811-000d3ab8d5b5}</connectionroleid>
+      <associatedconnectionroleid>{9d4c6bf8-8c93-ea11-a811-000d3ab8d5b5}</associatedconnectionroleid>
+    </ConnectionRoleAssociation>
+  </ConnectionRoleAssociations>
+</ConnectionRoles>

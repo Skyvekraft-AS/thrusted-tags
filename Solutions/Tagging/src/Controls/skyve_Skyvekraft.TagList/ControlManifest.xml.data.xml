@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CustomControl xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>skyve_Skyvekraft.TagList</Name>
+  <FileName>/Controls/skyve_Skyvekraft.TagList/ControlManifest.xml</FileName>
+</CustomControl>

@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{a93876e5-d7d0-4ac8-a85e-b6ef27c2fc64}</formid>
+    <IntroducedVersion>0.0.0.1</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form headerdensity="HighWithControls">
+      <tabs>
+        <tab verticallayout="true" id="{5a28c908-5176-4d96-b156-053d56aa05d6}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{9570cd1b-dd87-4d03-9980-599bb8ae9e5c}" height="auto">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{2ea0256b-c5e8-4f37-9703-c1d10e0a70b2}">
+                        <labels>
+                          <label description="Name" languagecode="1033" />
+                        </labels>
+                        <control id="skyve_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="skyve_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{93ae5d77-001c-7076-7330-4da2e03adc5b}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Scope" languagecode="1033" />
+                        </labels>
+                        <control id="skyve_scope" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="skyve_scope" disabled="false" uniqueid="{770196b9-d3c2-126a-d58a-469d4d35c6a7}" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{0d8edac1-37b8-d504-b9a5-300186c94e2c}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Duplication" languagecode="1033" />
+                        </labels>
+                        <control id="skyve_duplication" classid="{3EF39988-22BB-4f0b-BBBE-64B5A3748AEE}" datafieldname="skyve_duplication" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{309fc8a5-0ead-4317-8310-df7cb6c908ef}" showlabel="true" locklevel="0" rowspan="5">
+                        <labels>
+                          <label description="Description" languagecode="1033" />
+                        </labels>
+                        <control id="skyve_description" classid="{E0DECE4B-6FC8-4A8F-A065-082708572369}" datafieldname="skyve_description" disabled="false" />
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row></row>
+                    <row>
+                      <cell id="{bc4dc7b2-cf1b-48f5-9715-db4e34ba3acd}">
+                        <labels>
+                          <label description="Owner" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{7a209a76-e228-79e7-654b-2d18d2ea75d6}" showlabel="true" colspan="1" auto="false" rowspan="7">
+                        <labels>
+                          <label description="Tag Groups" languagecode="1033" />
+                        </labels>
+                        <control id="TAGGROUPS" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true" uniqueid="{66302367-3ad8-76ae-060c-d893a6da55be}">
+                          <parameters>
+                            <ViewId>{E1758BBC-1B7A-40BC-906F-6164BCE382CA}</ViewId>
+                            <IsUserView>false</IsUserView>
+                            <RelationshipName>skyve_skyve_tag_skyve_taggroup</RelationshipName>
+                            <TargetEntityType>skyve_taggroup</TargetEntityType>
+                            <AutoExpand>Fixed</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <ViewIds>{E1758BBC-1B7A-40BC-906F-6164BCE382CA}</ViewIds>
+                            <EnableJumpBar>false</EnableJumpBar>
+                            <ChartGridMode>All</ChartGridMode>
+                            <VisualizationId />
+                            <IsUserChart>false</IsUserChart>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                            <RelationshipRoleOrdinal>1</RelationshipRoleOrdinal>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row />
+                    <row></row>
+                    <row>
+                      <cell id="{ed46dc3d-5e85-29ee-1612-33ce7a6c7aa6}" showlabel="true" colspan="1" auto="true" rowspan="5">
+                        <labels>
+                          <label description="Tag Usage (Connections)" languagecode="1033" />
+                        </labels>
+                        <control id="TAGUSAGE" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true" uniqueid="{70649e0d-87de-b18d-148d-87a3298d77b7}">
+                          <parameters>
+                            <ViewId>{1C643422-E7A8-EA11-A812-000D3AB39307}</ViewId>
+                            <IsUserView>false</IsUserView>
+                            <RelationshipName>skyve_tag_connections1</RelationshipName>
+                            <TargetEntityType>connection</TargetEntityType>
+                            <AutoExpand>Auto</AutoExpand>
+                            <EnableQuickFind>false</EnableQuickFind>
+                            <EnableViewPicker>false</EnableViewPicker>
+                            <ViewIds>{7C0E0725-CCD9-4525-9313-665FD075652F},{1C643422-E7A8-EA11-A812-000D3AB39307}</ViewIds>
+                            <EnableJumpBar>false</EnableJumpBar>
+                            <ChartGridMode>All</ChartGridMode>
+                            <VisualizationId />
+                            <IsUserChart>false</IsUserChart>
+                            <EnableChartPicker>true</EnableChartPicker>
+                            <RecordsPerPage>4</RecordsPerPage>
+                            <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                          </parameters>
+                        </control>
+                      </cell>
+                    </row>
+                    <row />
+                    <row />
+                    <row />
+                    <row height="auto" />
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{d0c83fa5-37ed-4e0f-9a45-5b0e5a21e296}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{e914631b-026c-4956-9b91-957792e8173c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{edaf1d0b-fe14-4072-8c5b-cfbf16319745}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{6180b8e1-f5ef-42de-8067-ec106c0c77cb}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </header>
+      <footer id="{a3ec2b35-7cfc-44db-9268-5d35990c5e44}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{42c9bd11-112c-4764-8a71-a79278e448fd}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{d541686f-992f-4c3f-b301-72cf952ac01f}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{cc3ed083-9e26-4565-a580-d61938914bba}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+      <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+      <controlDescriptions />
+      <DisplayConditions Order="0" FallbackForm="true" />
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

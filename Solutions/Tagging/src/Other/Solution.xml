@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.1.0.18945" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>Tagging</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Thrusted tags" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Skyvekraft has developed Thrusted Tags for Dynamics 365 &amp; Power Apps.  It leverages the built-in Connections technology, adding a powerful and user-friendly user interface. Thrusted Tags makes it easy for users to mark any record with either personal, organization specific or company-wide Tags. Personal tags are great for users wanting to group data according to personal needs. Organizational tags are of interest to specific business areas, roles or functions, while Global tags are relevant for all users across organizational boundaries. Tags can be organized in Groups, so that it is easy to find all related tags and related tagged business records.  Tags can have an icon or photo associated for easy visual identification. Records can be individually, or bulk tagged with one or multiple tags at a time with an easy to-use interface. Tag duplication is automatically handled according to tag owners’ preferences. Related tags and tagged objects can be easily found using standard mechanisms. In addition, Tags are available as selectable facets and are visualized in search results in Skyvekraft Thrusted Search." languagecode="1033" />
+    </Descriptions>
+    <Version>1.0.0.4</Version>
+    <Managed>2</Managed>
+    <Publisher>
+      <UniqueName>skyvekraft</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Skyvekraft" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions>
+        <Description description="Skyvekraft" languagecode="1033" />
+      </Descriptions>
+      <EMailAddress>sergii.chvyr@skyvekraft.com</EMailAddress>
+      <SupportingWebsiteUrl>https://skyvekraft.com</SupportingWebsiteUrl>
+      <CustomizationPrefix>skyve</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>82322</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1>+47 477 18 763</Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="connection" behavior="2" />
+      <RootComponent type="1" schemaName="skyve_tag" behavior="0" />
+      <RootComponent type="1" schemaName="skyve_taggroup" behavior="0" />
+      <RootComponent type="9" schemaName="skyve_tagscope" behavior="0" />
+      <RootComponent type="20" id="{5095d789-a6b7-ea11-a812-000d3ab39307}" behavior="0" />
+      <RootComponent type="20" id="{7f3cc677-a6b7-ea11-a812-000d3ab39307}" behavior="0" />
+      <RootComponent type="50" schemaName=":RibbonDiffXml" behavior="0" />
+      <RootComponent type="61" schemaName="skyve_/bulktag/css/main.css" behavior="0" />
+      <RootComponent type="61" schemaName="skyve_/bulktag/html/index.html" behavior="0" />
+      <RootComponent type="61" schemaName="skyve_/bulktag/js/main.js" behavior="0" />
+      <RootComponent type="61" schemaName="skyve_/js/Skyve.OpenTagging.js" behavior="0" />
+      <RootComponent type="61" schemaName="skyve_SingleTag_Icon_ICO32" behavior="0" />
+      <RootComponent type="61" schemaName="skyve_SingleTag_Icon_PNG16" behavior="0" />
+      <RootComponent type="61" schemaName="skyve_SingleTag_Icon_SVG" behavior="0" />
+      <RootComponent type="61" schemaName="skyve_Tag_Icon_ICO32" behavior="0" />
+      <RootComponent type="61" schemaName="skyve_Tag_Icon_PNG16" behavior="0" />
+      <RootComponent type="61" schemaName="skyve_Tag_Icon_SVG" behavior="0" />
+      <RootComponent type="63" id="{9d4c6bf8-8c93-ea11-a811-000d3ab8d5b5}" behavior="0" />
+      <RootComponent type="63" id="{ad2161e6-8c93-ea11-a811-000d3ab8d5b5}" behavior="0" />
+      <RootComponent type="66" schemaName="skyve_Skyvekraft.TagBox" behavior="0" />
+      <RootComponent type="66" schemaName="skyve_Skyvekraft.TagList" behavior="0" />
+    </RootComponents>
+    <MissingDependencies />
+  </SolutionManifest>
+</ImportExportXml>

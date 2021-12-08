@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+	<control namespace="Skyvekraft" constructor="TagList" version="0.0.4" display-name-key="TagList" description-key="TagList description" control-type="standard">
+
+		<!-- dataset node represents a set of entity records on CDS; allow more than one datasets -->
+		<data-set name="DataSet" display-name-key="ControlProps_key">
+		</data-set>
+		<property name="Allow_Personal_Tags" display-name-key="Property_Allow_Personal_Key" description-key="Allow selecting personal tags on a contol" of-type="Enum" usage="input" >
+			<value name="Yes" display-name-key="Yes" description-key="Yes" default="true">Yes</value>
+			<value name="No" display-name-key="No" description-key="No">No</value>
+		</property>
+		<property name="Allow_Organizational_Tags" display-name-key="Property_Allow_Organizational_Key" description-key="Allow selecting organizational tags on a contol" of-type="Enum" usage="input">
+			<value name="Yes" display-name-key="Yes" description-key="Yes" default="true">Yes</value>
+			<value name="No" display-name-key="No" description-key="No">No</value>
+		</property>
+		<property name="Allow_Global_Tags" display-name-key="Property_Allow_Global_Key" description-key="Allow selecting global tags on a contol" of-type="Enum" usage="input">
+			<value name="Yes" display-name-key="Yes" description-key="Yes" default="true">Yes</value>
+			<value name="No" display-name-key="No" description-key="No">No</value>
+		</property>
+
+		<property name="Entity_Name" display-name-key="Property_Entity_Name_Key" description-key="Table name" of-type="SingleLine.Text" usage="input"/>
+		<property name="Record_Id" display-name-key="Property_Record_Id_Key" description-key="Record id" of-type="SingleLine.Text" usage="input"/>
+		<resources>
+			<code path="index.ts" order="1"/>
+			<!-- UNCOMMENT TO ADD MORE RESOURCES
+      <css path="css/TagList.css" order="1" />-->
+			<resx path="strings/TagList.1033.resx" version="1.0.0" />
+			<resx path="strings/TagList.1044.resx" version="1.0.0" />
+		</resources>
+
+		<feature-usage>
+			<!-- UNCOMMENT TO ENABLE THE SPECIFIED API     <uses-feature name="Device.captureAudio" required="true" />
+      <uses-feature name="Device.captureImage" required="true" />
+      <uses-feature name="Device.captureVideo" required="true" />
+      <uses-feature name="Device.getBarcodeValue" required="true" />
+      <uses-feature name="Device.getCurrentPosition" required="true" />
+      <uses-feature name="Device.pickFile" required="true" />  -->
+			<uses-feature name="Utility" required="true" />
+			<uses-feature name="WebAPI" required="true" />
+		</feature-usage>
+
+	</control>
+</manifest>

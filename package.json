@@ -1,0 +1,21 @@
+{
+  "name": "skyvekraft-dataverse-tagging",
+  "version": "1.0.7",
+  "description": "Skyvekraft Tagging Solution for Model-Driven Power Apps/Dynamics 365",
+  "scripts": {
+    "build": "pcf-scripts build",
+    "clean": "pcf-scripts clean",
+    "rebuild": "pcf-scripts rebuild",
+    "start": "pcf-scripts start"
+  },
+  "dependencies": {
+    "@fluentui/react": "^8.41.2",
+    "@fluentui/react-cards": "^0.200.56"  
+  },
+  "devDependencies": {
+    "pcf-scripts": "^1",
+    "pcf-start": "^1",
+    "@types/node": "^16.4",
+    "@types/powerapps-component-framework": "^1.3.0"
+  }
+}

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{1c643422-e7a8-ea11-a812-000d3ab39307}</savedqueryid>
+    <layoutxml>
+      <grid name="resultset" jump="name" select="1" preview="1" icon="1">
+        <row name="result" id="connectionid">
+          <cell name="record2id" width="200" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="record2objecttypecode" width="150" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="createdon" width="100" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="createdby" width="150" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="connection">
+          <order attribute="record2id" descending="false" />
+          <attribute name="record2objecttypecode" />
+          <attribute name="createdon" />
+          <attribute name="createdby" />
+          <attribute name="record2id" />
+          <attribute name="connectionid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>0.0.0.1</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Tag Usage" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Used in Tag View" languagecode="1033" />
+    </Descriptions>
+  </savedquery>
+</savedqueries>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Role id="{5095d789-a6b7-ea11-a812-000d3ab39307}" name="Thrusted Tags Administrator" isinherited="1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <IsCustomizable>1</IsCustomizable>
+  <RolePrivileges>
+    <RolePrivilege name="prvAppendConnection" level="Global" />
+    <RolePrivilege name="prvAppendskyve_tag" level="Global" />
+    <RolePrivilege name="prvAppendskyve_taggroup" level="Global" />
+    <RolePrivilege name="prvAppendToConnection" level="Global" />
+    <RolePrivilege name="prvAppendToskyve_tag" level="Global" />
+    <RolePrivilege name="prvAppendToskyve_taggroup" level="Global" />
+    <RolePrivilege name="prvAssignConnection" level="Global" />
+    <RolePrivilege name="prvAssignskyve_tag" level="Global" />
+    <RolePrivilege name="prvAssignskyve_taggroup" level="Global" />
+    <RolePrivilege name="prvCreateConnection" level="Global" />
+    <RolePrivilege name="prvCreateSharePointData" level="Global" />
+    <RolePrivilege name="prvCreateskyve_tag" level="Global" />
+    <RolePrivilege name="prvCreateskyve_taggroup" level="Global" />
+    <RolePrivilege name="prvDeleteConnection" level="Global" />
+    <RolePrivilege name="prvDeleteskyve_tag" level="Global" />
+    <RolePrivilege name="prvDeleteskyve_taggroup" level="Global" />
+    <RolePrivilege name="prvReadConnection" level="Global" />
+    <RolePrivilege name="prvReadConnectionRole" level="Global" />
+    <RolePrivilege name="prvReadPluginAssembly" level="Global" />
+    <RolePrivilege name="prvReadPluginType" level="Global" />
+    <RolePrivilege name="prvReadSdkMessage" level="Global" />
+    <RolePrivilege name="prvReadSdkMessageProcessingStep" level="Global" />
+    <RolePrivilege name="prvReadSdkMessageProcessingStepImage" level="Global" />
+    <RolePrivilege name="prvReadSharePointData" level="Global" />
+    <RolePrivilege name="prvReadSharePointDocument" level="Global" />
+    <RolePrivilege name="prvReadskyve_tag" level="Global" />
+    <RolePrivilege name="prvReadskyve_taggroup" level="Global" />
+    <RolePrivilege name="prvShareConnection" level="Global" />
+    <RolePrivilege name="prvShareskyve_tag" level="Global" />
+    <RolePrivilege name="prvShareskyve_taggroup" level="Global" />
+    <RolePrivilege name="prvWriteConnection" level="Global" />
+    <RolePrivilege name="prvWriteSharePointData" level="Global" />
+    <RolePrivilege name="prvWriteskyve_tag" level="Global" />
+    <RolePrivilege name="prvWriteskyve_taggroup" level="Global" />
+  </RolePrivileges>
+</Role>
