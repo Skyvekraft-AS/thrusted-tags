@@ -41,7 +41,7 @@ jobs:
           xpath: "//ImportExportXml/SolutionManifest/Version"
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       
       - name: Typescript 
         run: npm install typescript
