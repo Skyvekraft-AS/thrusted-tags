@@ -42,7 +42,10 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
+      
+      - name: Typescript 
+        run: npm install typescript
+        
       - run: npm run build --if-present
 
       - name: setup-msbuild
