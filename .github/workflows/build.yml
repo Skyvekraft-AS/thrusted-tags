@@ -40,26 +40,17 @@ jobs:
           xml-file: ${{ env.msbuildtarget }}/src/Other/Solution.xml
           xpath: "//ImportExportXml/SolutionManifest/Version"
 
-      - name: Install dependencies
-        run: npm ci
-      
-      - name: Typescript 
-        run: npm install typescript
-        
-      - run: npm run build --if-present
-
       - name: setup-msbuild
         uses: microsoft/setup-msbuild@v1
 
       - name: MSBuild
-        working-directory: ${{ env.msbuildtarget }}
         run: msbuild /restore /t:rebuild
 
       - name: Managed Solution Artifact ${{ steps.solution-unique-name.outputs.info }}_${{ steps.solution-version.outputs.info }}_managed.zip
         uses: actions/upload-artifact@v2
         with:
           name: ${{ steps.solution-unique-name.outputs.info }}_${{ steps.solution-version.outputs.info }}_managed.zip
-          path: ${{ env.msbuildtarget }}/bin/Debug/${{ steps.solution-unique-name.outputs.info }}_managed.zip
+          path: ${{ env.msbuildtarget }}/bin/Release/${{ steps.solution-unique-name.outputs.info }}_managed.zip
 
       - name: Unmanaged Solution Artifact ${{ steps.solution-unique-name.outputs.info }}_${{ steps.solution-version.outputs.info }}_unmanaged.zip
         uses: actions/upload-artifact@v2
@@ -87,7 +78,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ${{ env.msbuildtarget }}/bin/Debug/${{ steps.solution-unique-name.outputs.info }}_managed.zip
+          asset_path: ${{ env.msbuildtarget }}/bin/Release/${{ steps.solution-unique-name.outputs.info }}_managed.zip
           asset_name: ${{ steps.solution-unique-name.outputs.info }}_${{ steps.solution-version.outputs.info }}_managed.zip
           asset_content_type: application/zip
 
