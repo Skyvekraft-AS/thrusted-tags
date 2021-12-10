@@ -1,9 +1,7 @@
 import { IInputs, IOutputs } from "./generated/ManifestTypes";
-import DataSetInterfaces = ComponentFramework.PropertyHelper.DataSetApi;
 import ReactDOM = require("react-dom");
 import React = require("react");
-import { TagsListControl } from "./components/TagsListControl";
-import { Control } from "./Control";
+import { Control } from "./components/Control";
 
 export class TagList implements ComponentFramework.StandardControl<IInputs, IOutputs> {
 
@@ -12,6 +10,7 @@ export class TagList implements ComponentFramework.StandardControl<IInputs, IOut
 	/**
 	 * Empty constructor.
 	 */
+	//eslint-disable-next-line @typescript-eslint/no-empty-function
 	constructor() {
 
 	}
@@ -40,7 +39,7 @@ export class TagList implements ComponentFramework.StandardControl<IInputs, IOut
 			React.createElement(
 				Control, // the class type of the React component found in Facepile.tsx
 				{
-					context:this.context
+					context: context
 				}
 			),
 			this.container

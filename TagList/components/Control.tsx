@@ -1,8 +1,8 @@
 import * as React from "react"
-import { IInputs } from "./generated/ManifestTypes";
-import { TagsListControl } from "./components/TagsListControl";
+import { IInputs } from "../generated/ManifestTypes";
+import { TagsListControl } from "./TagsListControl";
 import { Stack } from "@fluentui/react/lib/Stack";
-import { Picker } from "./components/Picker";
+import { Picker } from "./Picker";
 
 export interface IControlProps {
     context: ComponentFramework.Context<IInputs>

@@ -91,8 +91,6 @@ export class TagService {
                         entity[bindProperty] = entityRef
                         await this.createTagLink(entity)
                     } // esle ignore
-
-
                 }
             }
         }

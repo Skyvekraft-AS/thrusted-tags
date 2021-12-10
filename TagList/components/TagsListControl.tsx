@@ -108,9 +108,10 @@ export class TagsListControl extends React.Component<ITagsListProps, ITagsListSt
     }
 
     private onRenderItemColumn(item?: Tag, index?: number | undefined, column?: IColumn | undefined): React.ReactNode {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const content = item ? (item as any)[column?.fieldName as string] : ''
 
-        let result =
+        const result =
             <span>{content}</span>
 
 
@@ -121,14 +122,15 @@ export class TagsListControl extends React.Component<ITagsListProps, ITagsListSt
         }
 
         switch (column?.fieldName) {
-            case 'actions':
+            case 'actions': {
                 const target = `skyve_untag${item?.connectionid}`
                 return <UntagFlyout key={`${target}_flyout`} tagName={item?.tagName || ''} onConfirm={() => {
                     this.unlinkTag(item?.connectionid as string)
                 }
                 } id={target} context={this.props.context} />
-                break
-            case 'tagName': return result = <Stack styles={{
+            }
+
+            case 'tagName': return <Stack styles={{
                 root: {
                     display: "inline-flex"
                 }
@@ -137,14 +139,14 @@ export class TagsListControl extends React.Component<ITagsListProps, ITagsListSt
                     () => {
                         if (item) openForm(item.tagId, 'skyve_tag')
                     }}>{content}</Link></Stack>
-                break
-            case 'taggedByName': return result = <Link onClick={
+
+            case 'taggedByName': return <Link onClick={
                 () => {
                     if (item) openForm(item.taggedBy, 'systemuser')
                 }} >{content}</Link>
-                break
-            case 'tagGroups': return result = <GroupsField key={`${item?.tagId}_groups`} tagId={item?.tagId} context={this.props.context} />
-                break
+
+            case 'tagGroups': return <GroupsField key={`${item?.tagId}_groups`} tagId={item?.tagId} context={this.props.context} />
+
         }
         if (column?.fieldName !== 'actions') { return <TooltipHost overflowMode={TooltipOverflowMode.Parent} content={content} id={`${item?.tagId}_${column?.fieldName}_tooltip`} > {result}</TooltipHost> }
         else { return result }
@@ -169,7 +171,7 @@ export class TagsListControl extends React.Component<ITagsListProps, ITagsListSt
                         taggedBy: entity._createdby_value,
                         taggedByName: entity['_createdby_value@OData.Community.Display.V1.FormattedValue'],
                         connectionid: entity.connectionid,
-                        type: entity.record1id_skyve_tag? entity.record1id_skyve_tag['skyve_scope@OData.Community.Display.V1.FormattedValue']:TagType.Public,
+                        type: entity.record1id_skyve_tag ? entity.record1id_skyve_tag['skyve_scope@OData.Community.Display.V1.FormattedValue'] : TagType.Public,
                         createdon: entity['createdon@OData.Community.Display.V1.FormattedValue'],
                         entityimage: entity.record1id_skyve_tag?.skyve_entityimage
                     }
@@ -185,11 +187,11 @@ export class TagsListControl extends React.Component<ITagsListProps, ITagsListSt
         })
     }
 
-    public componentWillReceiveProps(newProps: ITagsListProps): void {
-        this.setState(newProps)
-        console.log(newProps)
-        this.refreshTags()
-    }
+    //public componentWillReceiveProps(newProps: ITagsListProps): void {
+    //    this.setState(newProps)
+    //    console.log(newProps)
+    //    this.refreshTags()
+    //}
 
     public componentDidMount() {
         this.refreshTags()
@@ -213,7 +215,7 @@ export class TagsListControl extends React.Component<ITagsListProps, ITagsListSt
         }
 
         // Sort the items.
-        tags = this.copyAndSort(tags, column.fieldName!, isSortedDescending);
+        tags = this.copyAndSort(tags, column.fieldName||"", isSortedDescending);
 
         // Reset the items and columns to match the state.
         this.setState({

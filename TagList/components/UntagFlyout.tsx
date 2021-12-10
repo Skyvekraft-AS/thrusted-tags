@@ -50,7 +50,13 @@ const styles = mergeStyleSets({
         },
     ],
 })
-export const UntagFlyout: React.FunctionComponent<{ id: string, tagName: string, onConfirm: () => void, context: ComponentFramework.Context<any> }> = ({ onConfirm, id, tagName, context }) => {
+export const UntagFlyout: React.FunctionComponent<{
+    id: string,
+    tagName: string,
+    onConfirm: () => void,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    context: ComponentFramework.Context<any>
+}> = ({ onConfirm, id, tagName, context }) => {
     const [visible, setVisible] = React.useState(false)
     //   const target = `skyve_untag${item?.connectionid}`       
     const title = getLocalString(context, 'Untag_Title', 'Untag')
@@ -72,7 +78,7 @@ export const UntagFlyout: React.FunctionComponent<{ id: string, tagName: string,
             <div className={styles.inner}>
                 <div>
                     <Text className={styles.subtext}>
-                        {confirmBody} '{tagName}'
+                        {confirmBody} {tagName}
                  </Text>
                 </div>
             </div>

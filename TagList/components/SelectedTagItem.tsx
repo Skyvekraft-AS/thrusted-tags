@@ -11,9 +11,14 @@ import * as React from "react"
 import { getLocalString } from "../../Utilities"
 import { TagItem } from "../../types/TagItem"
 
-export const SelectedTagItem: React.FunctionComponent<{ tagProps: IPickerItemProps<TagItem>, context: ComponentFramework.Context<any>, innerElement?: (tag: TagItem) => JSX.Element }> = (props) => {
+export const SelectedTagItem: React.FunctionComponent<{
+    tagProps: IPickerItemProps<TagItem>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    context: ComponentFramework.Context<any>,
+    innerElement?: (tag: TagItem) => JSX.Element
+}> = (props) => {
     const [existsPersonal, setExistsPersonal] = React.useState(false)
-    const [warning, setWarning] = React.useState<any>(null)
+    const [warning, setWarning] = React.useState<React.ReactElement|null>(null)
     const cardTokens: ICardTokens = { childrenMargin: 8, minWidth: 100, maxHeight: 80, height: 'auto' }
     const footerCardSectionStyles: ICardSectionStyles = {
         root: {
@@ -25,7 +30,7 @@ export const SelectedTagItem: React.FunctionComponent<{ tagProps: IPickerItemPro
     const footerCardSectionTokens: ICardSectionTokens = { padding: '0px 0px 0px 6px' }
     const removeAction: IButtonProps = {
         iconProps: { iconName: 'Cancel' },
-        onClick: (ev: any) => {
+        onClick: () => {
             if (props.tagProps.onRemoveItem) {
                 props.tagProps.onRemoveItem()
             }
@@ -44,7 +49,7 @@ export const SelectedTagItem: React.FunctionComponent<{ tagProps: IPickerItemPro
 
     React.useEffect(() => {
         if (existsPersonal) {
-            const onRenderPlainCard = (item: any): JSX.Element => {
+            const onRenderPlainCard = (): JSX.Element => {
                 return <span>{tagExists}</span>
             }
             const hoverProps: IPlainCardProps = {

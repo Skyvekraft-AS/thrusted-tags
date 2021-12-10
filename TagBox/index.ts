@@ -7,9 +7,8 @@ export class TagBox implements ComponentFramework.StandardControl<IInputs, IOutp
 
 	private container: HTMLDivElement
 	private context: ComponentFramework.Context<IInputs>
-	/**
-	 * Empty constructor.
-	 */
+		
+	//eslint-disable-next-line @typescript-eslint/no-empty-function
 	constructor()
 	{
 
@@ -41,7 +40,7 @@ export class TagBox implements ComponentFramework.StandardControl<IInputs, IOutp
 			React.createElement(
 				Control, // the class type of the React component found in Facepile.tsx
 				{
-					context:this.context
+					context: context
 				}
 			),
 			this.container

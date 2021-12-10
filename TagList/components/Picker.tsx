@@ -12,6 +12,7 @@ import { GetAllowedScopes } from "../../InputUtils"
 import { TagItem } from "../../types/TagItem"
 
 export interface IPickerProps {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     context: ComponentFramework.Context<any>
     entityId: string;
     entityTypeName: string;
@@ -88,7 +89,7 @@ export class Picker extends React.Component<IPickerProps, IPickerState> {
     }
 
     private addTags(event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement | HTMLDivElement | BaseButton | Button | HTMLSpanElement, MouseEvent>) {
-        console.log((this.tagPicker.current?.items))
+        console.log(event)
         if (this.tagPicker.current) {
             this.props.context.utils.getEntityMetadata(this.props.entityTypeName)
                 .then((entityMeta) => {
@@ -151,7 +152,7 @@ export class Picker extends React.Component<IPickerProps, IPickerState> {
     }
 
     private getNewtags(): ITag[] {
-        let newTags: ITag[] = []
+        const newTags: ITag[] = []
         if (this.tagPicker && this.tagPicker.current && this.tagPicker.current.items.length > 0) {
             for (const tag of this.tagPicker.current.items) {
                 if ((tag as TagItem).toCreate === true) {

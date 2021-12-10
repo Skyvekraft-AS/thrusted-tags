@@ -14,17 +14,50 @@ import { GetAllowedScopes, RequireUntagConfirmation } from "../../InputUtils"
 import { TagItem } from "../../types/TagItem"
 
 export const Control: React.FunctionComponent<{ context: ComponentFramework.Context<IInputs> }> = ({ context }) => {
-
-   
-
     const entityId = context.parameters.Record_Id.raw || ""
-    const entityTypeName =context.parameters.Entity_Name.raw || ""
-    const tagService = new TagService(context)
-    const [key, setKey] = React.useState(`pickerKey`)
+    const entityTypeName = context.parameters.Entity_Name.raw || ""
+    const [tagService,] = React.useState<TagService>(new TagService(context))
+    const [key] = React.useState(`pickerKey`)
     const [selectedTags, setSelectedtags] = React.useState<TagItem[]>([])
     const [update, setUpdate] = React.useState(0)
-    const onAdded = () => { setUpdate(update + 1) }
+    const onAdded = () => {
+        setUpdate((current) => { return current + 1 })
+    }
+
     const allowedScopes = GetAllowedScopes(context)
+
+    const untag = React.useCallback((item: TagItem) => {
+        const index = selectedTags?.indexOf(item)
+        if (item.connectionid) {
+            tagService.unlinkTag(item.connectionid).then(() => {
+                selectedTags?.splice(index as number, 1)
+                setSelectedtags([...selectedTags])
+            })
+        }
+        else {
+            selectedTags?.splice(index as number, 1)
+            setSelectedtags([...selectedTags])
+        }
+    }, [tagService])
+
+    const onRemove = React.useCallback((item: TagItem) => {
+        if (RequireUntagConfirmation(context)) {
+            const title = getLocalString(context, 'Confirm_Untag_Title', 'Confirm untag')
+            const confirmBody = getLocalString(context, 'Confirm_Untag_Text', 'Confirm or Cancel removal of Tag:')
+            const confirmButtonLabel = getLocalString(context, 'Confirm_Untag_Button_text', 'Confirm')
+            const cancelButtonLabel = getLocalString(context, 'Cancel_Untag_Button_text', 'Cancel')
+
+            context.navigation.openConfirmDialog({ title: title, text: `${confirmBody} '${item.name}'`, confirmButtonLabel: confirmButtonLabel, cancelButtonLabel: cancelButtonLabel }).then((result) => {
+                if (result.confirmed) {
+                    untag(item)
+                }
+            })
+
+        }
+        else {
+            untag(item)
+        }
+    }, [])
 
     React.useEffect(() => {
         tagService.getTagsForRecord(entityId)
@@ -83,38 +116,7 @@ export const Control: React.FunctionComponent<{ context: ComponentFramework.Cont
                     context={context} entityId={entityId}
                     entityTypeName={entityTypeName}
                     onAdded={onAdded}
-                    onRemove={(item) => {
-                        const untag = function () {
-                            const index = selectedTags?.indexOf(item)
-                            if (item.connectionid) {
-                                tagService.unlinkTag(item.connectionid).then(() => {
-                                    selectedTags?.splice(index as number, 1)
-                                    setSelectedtags([...selectedTags])
-                                })
-                            }
-                            else {
-                                selectedTags?.splice(index as number, 1)
-                                setSelectedtags([...selectedTags])
-                            }
-                        }
-
-                        if (RequireUntagConfirmation(context)) {
-                            const title = getLocalString(context, 'Confirm_Untag_Title', 'Confirm untag')
-                            const confirmBody = getLocalString(context, 'Confirm_Untag_Text', 'Confirm or Cancel removal of Tag:')
-                            const confirmButtonLabel = getLocalString(context, 'Confirm_Untag_Button_text', 'Confirm')
-                            const cancelButtonLabel = getLocalString(context, 'Cancel_Untag_Button_text', 'Cancel')
-
-                            context.navigation.openConfirmDialog({ title: title, text: `${confirmBody} '${item.name}'`, confirmButtonLabel: confirmButtonLabel, cancelButtonLabel: cancelButtonLabel }).then((result) => {
-                                if (result.confirmed) {
-                                    untag()
-                                }
-                            })
-
-                        }
-                        else {
-                            untag()
-                        }
-                    }}
+                    onRemove={onRemove}
                     onSelected={(tag) => {
                         if (!tag) {
                             return null
