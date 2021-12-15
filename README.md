@@ -7,3 +7,5 @@ Skyvekraft has developed Thrusted Tags for Dataverse & Dynamics 365.  It leverag
 Tags can be organized in Groups, so that it is easy to find all related tags and related tagged business records.  Tags can have an icon or photo associated for easy visual identification. Records can be individually, or bulk tagged with one or multiple tags at a time with an easy to-use interface. Tag duplication is automatically handled according to tag owners’ preferences. Related tags and tagged objects can be easily found using standard mechanisms. 
 
 Visit us at [Skyvekraft AS](https://skyvekraft.com)
+
+More information on Thusted Tags: [https://www.skyvekraft.com/thrustedtags/?lang=en](https://www.skyvekraft.com/thrustedtags/?lang=en) 
