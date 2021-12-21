@@ -1,6 +1,5 @@
 import { IPickerItemProps } from "@fluentui/react/lib/Pickers"
 import { IButtonProps, IconButton } from "@fluentui/react/lib/Button"
-import { Image } from "@fluentui/react/lib/Image"
 import { Text } from "@fluentui/react/lib/Text"
 import { Icon } from "@fluentui/react/lib/Icon"
 import { HoverCard, HoverCardType, IPlainCardProps } from "@fluentui/react/lib/HoverCard"
@@ -10,6 +9,7 @@ import { TagService } from "../../services/TagService"
 import * as React from "react"
 import { getLocalString } from "../../Utilities"
 import { TagItem } from "../../types/TagItem"
+import { TagImage } from "./TagImage"
 
 export const SelectedTagItem: React.FunctionComponent<{
     tagProps: IPickerItemProps<TagItem>,
@@ -65,10 +65,7 @@ export const SelectedTagItem: React.FunctionComponent<{
         }
     }, [existsPersonal])
 
-    const imageSection = props.tagProps.item?.entityimage ? <Image src={`data:image;base64,${props.tagProps.item?.entityimage}`} height={25} width={25} /> :
-        <Icon styles={{
-            root: { width: 25, height: 25, fontSize: 25 },
-        }} iconName={'Tag'} />
+ 
     const newIcon = <TooltipHost
         content={personalWillBeCreated}
         id={`${props.tagProps.item.key}_tooltip_add`}
@@ -78,7 +75,7 @@ export const SelectedTagItem: React.FunctionComponent<{
 
     return <Card tokens={cardTokens} horizontal>
         <Card.Section>
-            {props.tagProps.item.toCreate !== true ? imageSection : newIcon}
+            {props.tagProps.item.toCreate !== true ? <TagImage entityImage={props.tagProps.item?.entityimage } /> : newIcon}
         </Card.Section>
         {warning}
         <Card.Section>

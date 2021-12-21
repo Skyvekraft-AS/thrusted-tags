@@ -18,7 +18,11 @@ export const GroupsField: React.FunctionComponent<{ tagId?: string, context: Com
 
     return (<div>
         {groups.map((value) => {
-            return <Link key={ value['skyve_taggroupid']} onClick={() => {
+            return <Link styles={{
+                root: {
+                    paddingRight: 5
+                }
+            }} key={value['skyve_taggroupid']} onClick={() => {
                 context.navigation.openForm({entityId: value['skyve_taggroupid'], entityName: 'skyve_taggroup', openInNewWindow:true})
             }} >{value['skyve_name']}</Link>
         })}

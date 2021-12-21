@@ -1,10 +1,10 @@
 import * as React from "react"
 import {
-    TagPicker, ITag,  ITagPickerProps, BasePicker,
+    TagPicker, ITag, ITagPickerProps, BasePicker,
     IBasePickerState, ISuggestionItemProps, IBasePickerSuggestionsProps, ValidationState
 } from '@fluentui/react/lib/Pickers'
-import { Stack} from '@fluentui/react/lib/Stack'
-import { IconButton, BaseButton, Button} from '@fluentui/react/lib/Button'
+import { Stack } from '@fluentui/react/lib/Stack'
+import { IconButton, BaseButton, Button } from '@fluentui/react/lib/Button'
 import { TagService } from "../../services/TagService"
 import { SelectedTagItem } from "../components/SelectedTagItem"
 import { EntityToTagItem, getLocalString } from "../../Utilities"
@@ -147,7 +147,7 @@ export class Picker extends React.Component<IPickerProps, IPickerState> {
             <span style={{ width: 150, margin: 4, padding: 4, textAlign: "left", fontWeight: 600 }}>{props.name}</span>
             <span style={{ width: 140, margin: 4, padding: 4, textAlign: "left" }}>{props.groups}</span>
             <span style={{ width: 95, margin: 4, padding: 4, textAlign: "left" }}> {props.tagType}</span>
-            <span style={{ width: 120, margin: 4, padding: 4 , textAlign: "left"}}>{props.createdBy}</span>
+            <span style={{ width: 120, margin: 4, padding: 4, textAlign: "left" }}>{props.createdBy}</span>
         </Stack>)
     }
 
@@ -179,7 +179,7 @@ export class Picker extends React.Component<IPickerProps, IPickerState> {
 
         const suggestedTags = getLocalString(this.props.context, 'Suggested_Tags_Text', 'Suggested Tags (Name, Groups, Type, Owner)')
         const forseResolveText = getLocalString(this.props.context, 'Force_Resolve_Text', 'Create new personal Tag?')
-        const searchPlaceHolder= getLocalString(this.props.context, 'Search_Placeholder_Text', 'Type here to search for existing tags...')
+        const searchPlaceHolder = getLocalString(this.props.context, 'Search_Placeholder_Text', 'Type here to search for existing tags...')
 
         const pickerProps: IBasePickerSuggestionsProps = {
             suggestionsHeaderText: suggestedTags,
@@ -194,9 +194,9 @@ export class Picker extends React.Component<IPickerProps, IPickerState> {
                 else { return false }
             }
         }
-        let index=0
+       
         return (
-            <Stack >
+            <Stack>
                 <Stack horizontal={true}>
                     <TagPicker
                         inputProps={{ placeholder: searchPlaceHolder }}
@@ -223,13 +223,12 @@ export class Picker extends React.Component<IPickerProps, IPickerState> {
                         onItemSelected={this.props.onSelected}
                         onRenderItem={(props) => {
                             return (<SelectedTagItem
-                                key={`selectedtagitem_${index++}`}
-                            innerElement = { this.props.innerElement }
-                            tagProps = {{
+                                innerElement={this.props.innerElement}
+                                tagProps={{
                                     ...props, onRemoveItem: this.props.onRemove ?
                                         () => {
-                        this.props.onRemove ? this.props.onRemove(props.item as TagItem) : null
-                    } : props.onRemoveItem
+                                            this.props.onRemove ? this.props.onRemove(props.item as TagItem) : null
+                                        } : props.onRemoveItem
                                 }} context={this.props.context} />)
                         }}
                     />

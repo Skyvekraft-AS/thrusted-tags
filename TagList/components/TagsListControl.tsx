@@ -97,7 +97,7 @@ export class TagsListControl extends React.Component<ITagsListProps, ITagsListSt
         this.tagService.unlinkTag(connectionId).then(() => {
             const { tags } = this.state
             for (let i = 0; i < tags.length; i++) {
-                if (tags[i].connectionid == connectionId) {
+                if (tags[i].connectionid === connectionId) {
                     tags.splice(i, 1)
                 }
             }
