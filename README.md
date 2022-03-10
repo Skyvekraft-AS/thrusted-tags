@@ -1,11 +1,17 @@
-# Thrusted Tags for Dataverse & Dynamics 365
+# Thrusted Tags for Dynamics 365 & Dataverse
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Skyvekraft-AS/thrusted-tags/build) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/Skyvekraft-As/thrusted-tags)
 
-Skyvekraft has developed Thrusted Tags for Dataverse & Dynamics 365.  It leverages the built-in Connections technology, adding a powerful and user-friendly user interface. Thrusted Tags makes it easy for users to mark any record with either personal, organization specific or company-wide Tags. Personal tags are great for users wanting to group data according to personal needs. Organizational tags are of interest to specific business areas, roles or functions, while Global tags are relevant for all users across organizational boundaries. 
+We need to be able to easily group and segment records, like Accounts, Contacts, Opportunities, Leads or other business data. Dynamics 365 provides several different mechanisms that all have their usage areas. However, there is a need to be able to quickly group records, in a way that is suitable for both individual and organizational usage.
 
-Tags can be organized in Groups, so that it is easy to find all related tags and related tagged business records.  Tags can have an icon or photo associated for easy visual identification. Records can be individually, or bulk tagged with one or multiple tags at a time with an easy to-use interface. Tag duplication is automatically handled according to tag owners’ preferences. Related tags and tagged objects can be easily found using standard mechanisms. 
+Skyvekraft Thrusted Tags leverages the built-in Connections technology in Dynamics 365, adding a powerful and user-friendly user interface.
 
-Visit us at [Skyvekraft AS](https://skyvekraft.com)
+Thrusted Tags has built-in life-cycle management capabilities such as Tag Ownership, Scope, Tag Groups, and Duplication Handling. Icons and pictures can be used for easy visual identification, and it supports bulk tagging.
 
-More information on Thusted Tags: [https://www.skyvekraft.com/thrustedtags/?lang=en](https://www.skyvekraft.com/thrustedtags/?lang=en) 
+Easier segmentation capabilities provides not only benefits for individual users, it also increases the value of the data in the organizations Dynamics 365 solution.
+
+Thrusted Tags is free: The source code, as well as managed and unmanaged solutions that are ready for installation are freely available here on GitHub.
+
+More information about Thusted Tags, including user manual, blog article, installation guide etc. can be found here: [https://www.skyvekraft.com/thrustedtags](https://www.skyvekraft.com/thrustedtags/?lang=en) 
+
+Visit us at [skyvekraft.com](https://skyvekraft.com/?lang=en)
