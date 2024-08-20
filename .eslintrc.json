@@ -3,7 +3,10 @@
     "browser": true,
     "es2021": true
   },
-  "ignorePatterns": [ "**/generated/*.ts", "**/*.xml" ],
+  "ignorePatterns": [
+    "**/generated/*.ts",
+    "**/*.xml"
+  ],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -22,6 +25,12 @@
     "@typescript-eslint"
   ],
   "rules": {
-    "@typescript-eslint/no-empty-function": "off"
+    "@typescript-eslint/no-empty-function": "off",
+    "react/prop-types": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   }
 }

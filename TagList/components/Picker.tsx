@@ -1,7 +1,7 @@
 import * as React from "react"
 import {
     TagPicker, ITag, ITagPickerProps, BasePicker,
-    IBasePickerState,  IBasePickerSuggestionsProps, ValidationState
+    IBasePickerState, IBasePickerSuggestionsProps, ValidationState
 } from '@fluentui/react/lib/Pickers'
 import { Stack } from '@fluentui/react/lib/Stack'
 import { IconButton, BaseButton, Button } from '@fluentui/react/lib/Button'
@@ -194,7 +194,7 @@ export class Picker extends React.Component<IPickerProps, IPickerState> {
                 else { return false }
             }
         }
-       
+
         return (
             <Stack>
                 <Stack horizontal={true}>
@@ -213,7 +213,7 @@ export class Picker extends React.Component<IPickerProps, IPickerState> {
                             this.onSelectedTagsChange(tags)
                         }}
                         onValidateInput={(input) => { return this.onValidateInput(input) }}
-                        createGenericItem={(input, _) => { return this.resolveTagWithText(input) }}
+                        createGenericItem={(input) => { return this.resolveTagWithText(input) }}
                         pickerSuggestionsProps={pickerProps}
                         componentRef={this.tagPicker}
                         itemLimit={100}
@@ -227,7 +227,8 @@ export class Picker extends React.Component<IPickerProps, IPickerState> {
                                 tagProps={{
                                     ...props, onRemoveItem: this.props.onRemove ?
                                         () => {
-                                            this.props.onRemove ? this.props.onRemove(props.item as TagItem) : null
+                                            if (this.props.onRemove)
+                                                this.props.onRemove(props.item as TagItem)
                                         } : props.onRemoveItem
                                 }} context={this.props.context} />)
                         }}
