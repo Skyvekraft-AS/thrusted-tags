@@ -1,6 +1,6 @@
 import {IInputs, IOutputs} from "./generated/ManifestTypes";
-import ReactDOM = require("react-dom");
-import React = require("react");
+import * as ReactDOM  from "react-dom"
+import * as  React from "react"
 import { Control } from "./components/Control";
 
 export class TagBox implements ComponentFramework.StandardControl<IInputs, IOutputs> {

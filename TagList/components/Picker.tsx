@@ -1,7 +1,7 @@
 import * as React from "react"
 import {
     TagPicker, ITag, ITagPickerProps, BasePicker,
-    IBasePickerState, ISuggestionItemProps, IBasePickerSuggestionsProps, ValidationState
+    IBasePickerState,  IBasePickerSuggestionsProps, ValidationState
 } from '@fluentui/react/lib/Pickers'
 import { Stack } from '@fluentui/react/lib/Stack'
 import { IconButton, BaseButton, Button } from '@fluentui/react/lib/Button'
@@ -122,7 +122,7 @@ export class Picker extends React.Component<IPickerProps, IPickerState> {
         }
     }
 
-    private resolveTagWithText(input: string, state: ValidationState): TagItem {
+    private resolveTagWithText(input: string): TagItem {
         const newTag = {
             name: input,
             key: input,
@@ -142,7 +142,7 @@ export class Picker extends React.Component<IPickerProps, IPickerState> {
         return newTag
     }
 
-    private renderSuggestionTag(props: TagItem, itemProps: ISuggestionItemProps<TagItem>): JSX.Element {
+    private renderSuggestionTag(props: TagItem): JSX.Element {
         return (<Stack key={`suggetedItem_${props.key}`} horizontal={true} tokens={{ childrenGap: 8 }}>
             <span style={{ width: 150, margin: 4, padding: 4, textAlign: "left", fontWeight: 600 }}>{props.name}</span>
             <span style={{ width: 140, margin: 4, padding: 4, textAlign: "left" }}>{props.groups}</span>
@@ -213,7 +213,7 @@ export class Picker extends React.Component<IPickerProps, IPickerState> {
                             this.onSelectedTagsChange(tags)
                         }}
                         onValidateInput={(input) => { return this.onValidateInput(input) }}
-                        createGenericItem={(input, state) => { return this.resolveTagWithText(input, state) }}
+                        createGenericItem={(input, _) => { return this.resolveTagWithText(input) }}
                         pickerSuggestionsProps={pickerProps}
                         componentRef={this.tagPicker}
                         itemLimit={100}

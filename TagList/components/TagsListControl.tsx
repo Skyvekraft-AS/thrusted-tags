@@ -163,7 +163,7 @@ export class TagsListControl extends React.Component<ITagsListProps, ITagsListSt
             else {
                 const allowedScopes = GetAllowedScopes(this.props.context)
                 const tags: Tag[] = []
-                //@ts-ignore
+                //@ts-expect-error type issue
                 value.entities.map((entity: ConnectionRecord) => {
                     const item = {
                         tagName: entity['_record1id_value@OData.Community.Display.V1.FormattedValue'],
@@ -175,7 +175,7 @@ export class TagsListControl extends React.Component<ITagsListProps, ITagsListSt
                         createdon: entity['createdon@OData.Community.Display.V1.FormattedValue'],
                         entityimage: entity.record1id_skyve_tag?.skyve_entityimage
                     }
-                    if (allowedScopes.length === 0 || (!!entity.record1id_skyve_tag && allowedScopes.indexOf(entity.record1id_skyve_tag.skyve_scope)) >= 0) {
+                    if (allowedScopes.length === 0 || (!!entity.record1id_skyve_tag && allowedScopes.indexOf(entity.record1id_skyve_tag.skyve_scope)>= 0) ) {
                         tags.push(item)
                     }
                 })
